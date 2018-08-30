@@ -27,9 +27,9 @@ public class TestArray {
         for(int i = 0; i < length - 1; ++i){
 
             if(values[i] < 0){
-                if(values[i - 1] < values[i + 1]){
+                if(values[i - 1] < values[i + 1] && values[i + 1] <= values[i + 2]){
                     values[i] = values[i - 1] + 1;
-                }else if(values[i - 1] > values[i + 1]){
+                }else if(values[i - 1] > values[i + 1] && values[i + 1] >= values[i + 2]){
                     values[i] = values[i - 1] - 1;
                 }
             }

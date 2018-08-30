@@ -17,7 +17,7 @@ public class main {
 
         System.out.println();
 
-        int arr2[] = {1, -1, 2, 4, 5, -2, 3, 2, -1, 2};
+        int arr2[] = {1, -1, 4, 4, 5, -2, 3, 2, -1, 2};
         int length2 = arr2.length;
         testArray.arrayRestore(arr2, length2);
 
