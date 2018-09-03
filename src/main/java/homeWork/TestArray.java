@@ -23,14 +23,17 @@ public class TestArray {
     }
 
     public void arrayRestore(int values[], int length) {
-        for (int i = 0; i < length - 1; ++i) {
-            if (values[i] < 0) {
-                if (values[i - 1] < values[i + 1] && values[i + 1] <= values[i + 2]) {
-                    values[i] = values[i - 1] + 1;
-                } else if (values[i - 1] > values[i + 1] && values[i + 1] >= values[i + 2]) {
-                    values[i] = values[i - 1] - 1;
-                } else if (values[i - 1] == values[i + 1]) {
+        int i = 0;
+        for (; i < length ; ++i) {
+            if (values[i] <= 0) {
+                if (i == 0 && (values[i + 1] < values[i + 2])) {
                     values[i] = values[i + 1] - 1;
+                }else if (i == 0 && (values[i + 1] > values[i + 2])) {
+                    values[i] = values[i + 1] + 1;
+                }else if (values[i - 2] < values[i - 1]) {
+                    values[i] = values[i - 1] + 1;
+                }else if (values[i - 2] > values[i - 1]) {
+                    values[i] = values[i - 1] - 1;
                 }
             }
         }
