@@ -3,7 +3,7 @@ package homeWork;
 /**
  * First sets to answers
  */
-public class TestArray {
+public class HomeWork1 {
 
     public void arrayRotation(int values[], int length, int k) {
         /*Integer[] valuesCopy = new int[k];
