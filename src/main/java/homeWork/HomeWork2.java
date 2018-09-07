@@ -15,21 +15,20 @@ public class HomeWork2 {
     }
 
     public void reverse(int i, int j, String letters){
-        char quotes = '"';
         int counter = 0;
-        System.out.print(letters + " - substring " + quotes);
+        System.out.print(letters + " - substring " + "\"");
         for (; i <= j; i++){
             System.out.print(letters.charAt(i));
             counter++;
         }
         i = i - counter;
-        System.out.print(quotes);
-        System.out.print(" was reversed to " + quotes);
+        System.out.print("\"");
+        System.out.print(" was reversed to " + "\"");
 
         for (; j >= i; j--){
             System.out.print(letters.charAt(j));
         }
-        System.out.print(quotes);
+        System.out.print("\"");
     }
 
     public int frequency(char letter, String letters){
