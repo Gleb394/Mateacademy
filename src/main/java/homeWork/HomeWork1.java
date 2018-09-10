@@ -37,7 +37,7 @@ public class HomeWork1 {
         for (; i < length; ++i) {
             if (values[i] <= 0) {
                 if (i <= 1) {
-                    values[i] = (values[i + 1] < values[i + 2]) ? values[i + 1] - 1 : values[i + 1] + 1;
+                    values[i] = values[i + 1] < values[i + 2] ? values[i + 1] - 1 : values[i + 1] + 1;
                 } else values[i] = values[i - 2] < values[i - 1] ? values[i - 1] + 1 : values[i - 1] - 1;
             }
         }
