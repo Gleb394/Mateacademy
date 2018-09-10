@@ -1,40 +1,44 @@
 package homeWork;
 
-/**
- * First sets to answers
- */
 public class HomeWork1 {
 
-    public void arrayRotation(int values[], int length, int k) {
-        /*Integer[] valuesCopy = new int[k];
+    public void arrayRotationCopy(int values[], int length, int k) {
+        int[] valuesCopy = new int[k];
         System.arraycopy(values, 0, valuesCopy, 0, k);
-        System.arraycopy(values, k, values, 0, length-k);
-        System.arraycopy(valuesCopy, 0, values, length-k, k);*/
+        System.arraycopy(values, k, values, 0, length - k);
+        System.arraycopy(valuesCopy, 0, values, length - k, k);
 
-        for (int i = 0; i < k; i++) {
-            int valueMove = values[0];
-            for (int j = 0; j < length - 1; ++j)
-                values[j] = values[j + 1];
-            values[length - 1] = valueMove;
-        }
         for (int value : values) {
+            System.out.print(value + " ");
+        }
+    }
+
+    public void arrayRotationFor(int values[], int length, int k) {
+        int newArray[] = new int[length];
+        int valueRemove = 0;
+
+        for (int i = k; i <= length - 1 ; i++) {
+            newArray[valueRemove] = values[i];
+            valueRemove++;
+        }
+
+        for (int j = 0; j < k; j++) {
+            newArray[valueRemove] = values[j];
+            valueRemove++;
+        }
+
+        for (int value : newArray) {
             System.out.print(value + " ");
         }
     }
 
     public void arrayRestore(int values[], int length) {
         int i = 0;
-        for (; i < length ; ++i) {
+        for (; i < length; ++i) {
             if (values[i] <= 0) {
-                if (i <= 1 && (values[i + 1] < values[i + 2])) {
-                    values[i] = values[i + 1] - 1;
-                }else if (i <= 1 && (values[i + 1] > values[i + 2])) {
-                    values[i] = values[i + 1] + 1;
-                }else if (values[i - 2] < values[i - 1]) {
-                    values[i] = values[i - 1] + 1;
-                }else if (values[i - 2] > values[i - 1]) {
-                    values[i] = values[i - 1] - 1;
-                }
+                if (i <= 1) {
+                    values[i] = (values[i + 1] < values[i + 2]) ? values[i + 1] - 1 : values[i + 1] + 1;
+                } else values[i] = values[i - 2] < values[i - 1] ? values[i - 1] + 1 : values[i - 1] - 1;
             }
         }
         for (int value : values) {

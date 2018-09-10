@@ -14,7 +14,12 @@ public class main {
         int arr[] = {5, 2, 3, 4, 6, 5, 7};
         int length = arr.length;
         int k = 2;
-        homeWork1.arrayRotation(arr, length, k);
+        homeWork1.arrayRotationCopy(arr, length, k);
+        System.out.println();
+        int arr1[] = {5, 2, 3, 4, 6, 5, 7};
+        int length1 = arr1.length;
+        int k1 = 2;
+        homeWork1.arrayRotationFor(arr1, length1, k1);
 
         System.out.println();
 
