@@ -6,7 +6,7 @@ public class HomeWork2 {
         int backward = word.length() - 1;
 
         for (int i = 0; backward > i; i++) {
-            if(word.charAt(i) != word.charAt(backward)) {
+            if (word.charAt(i) != word.charAt(backward)) {
                 return "isn't palindrome";
             }
             backward--;
@@ -31,11 +31,11 @@ public class HomeWork2 {
         System.out.print("\"");
     }
 
-    public int frequency(char letter, String letters){
+    public int frequency(char letter, String letters) {
         int counter = 0;
 
-        for (char chars: letters.toCharArray()) {
-            if (letter == chars){
+        for (char chars : letters.toCharArray()) {
+            if (letter == chars) {
                 counter++;
             }
         }
