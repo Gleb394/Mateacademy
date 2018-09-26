@@ -17,16 +17,18 @@ public class HomeWork2 {
     public void reverse(int i, int j, String letters) {
         int counter = 0;
         System.out.print(letters + " - substring " + "\"");
-        for (; i <= j; i++) {
+        while (i <= j) {
             System.out.print(letters.charAt(i));
+            i++;
             counter++;
         }
         i = i - counter;
         System.out.print("\"");
         System.out.print(" was reversed to " + "\"");
 
-        for (; j >= i; j--) {
+        while (j >= i) {
             System.out.print(letters.charAt(j));
+            j--;
         }
         System.out.print("\"");
     }

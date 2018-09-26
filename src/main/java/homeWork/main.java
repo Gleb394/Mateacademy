@@ -50,5 +50,4 @@ public class main {
         char letter = 'a';
         System.out.println(homeWork2.frequency(letter, letters));
     }
-
 }
