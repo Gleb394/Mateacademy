@@ -1,3 +1,2 @@
 .idea
 *.iml
-git rm --cached --ignore-unmatch application.yml
